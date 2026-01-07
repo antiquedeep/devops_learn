@@ -3,3 +3,4 @@
 apps:
   - nodejs
   - npm
+  - unzip
