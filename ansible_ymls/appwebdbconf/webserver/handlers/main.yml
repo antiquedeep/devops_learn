@@ -1,0 +1,7 @@
+---
+# handlers file for webserver
+- name: enable nginx
+  service:
+    name: nginx
+    state: restarted
+    enabled: yes

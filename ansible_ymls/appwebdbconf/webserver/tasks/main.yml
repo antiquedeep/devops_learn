@@ -1,0 +1,8 @@
+---
+# tasks file for webserver
+- name: Install Nginx
+  dnf:
+    name: nginx
+    state: latest
+  notify: enable nginx
+  changed_when: true

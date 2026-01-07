@@ -1,0 +1,32 @@
+---
+- name: configuration for 3 tier project
+  hosts: all
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Update all packages before starting server setup
+      dnf: 
+        name: "*"
+        state: latest
+
+
+- name: Setup WebServer
+  hosts: web
+  gather_facts: false
+  become: true
+  roles:
+    - webserver
+
+- name: Setup AppServer
+  hosts: app
+  gather_facts: false
+  become: true
+  roles:
+    - appserver
+
+- name: Setup DBServer
+  hosts: db
+  gather_facts: false
+  become: true
+  roles:
+    - dbserver

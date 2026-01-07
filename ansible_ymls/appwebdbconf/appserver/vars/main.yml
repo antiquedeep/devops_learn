@@ -1,0 +1,5 @@
+---
+# vars file for appserver
+apps:
+  - nodejs
+  - npm

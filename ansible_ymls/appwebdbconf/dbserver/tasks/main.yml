@@ -1,0 +1,8 @@
+---
+# tasks file for dbserver
+- name: Install MariaDB
+  dnf:
+    name: mariadb*
+    state: latest
+  notify: enable mariadb
+  changed_when: true
