@@ -1,0 +1,14 @@
+---
+- name: Configure time using chrony
+  hosts: all
+  become: yes
+
+  vars:
+    timesync_ntp_servers:
+      - hostname: time.google.com
+        iburst: yes
+      - hostname: pool.ntp.org
+        iburst: yes
+
+  roles:
+    - linux-system-roles.timesync

@@ -1,0 +1,12 @@
+---
+- name: Deploy Node js app configuration
+  hosts: localhost
+  become: true
+
+  roles:
+    - role: deploy_nodejs_app
+      vars:
+        app_port: 8080
+        env_vars:
+          NODE_ENV: staging
+          DB_HOST: localhost

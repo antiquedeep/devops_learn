@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ company_name }}</title>
+</head>
+<body>
+    <h1>Welcome to {{ company_name }}</h1>
+    <p>Environment: {{ environment }}</p>
+    <p>Server: {{ ansible_hostname }}</p>
+    <p>Date: {{ ansible_date_time.date }}</p>
+</body>
+</html>

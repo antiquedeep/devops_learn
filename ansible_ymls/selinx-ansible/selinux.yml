@@ -1,0 +1,11 @@
+---
+- name: Configure SELinux using system role
+  hosts: localhost
+  become: yes
+
+  roles:
+    - linux-system-roles.selinux
+
+  vars:
+    selinux_policy: targeted
+    selinux_state: enforcing

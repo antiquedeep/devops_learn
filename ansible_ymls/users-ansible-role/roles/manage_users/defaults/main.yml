@@ -1,0 +1,5 @@
+users_list:
+  - name: dev
+    ssh_key: "ssh-rsa AAAAB3Nza... dev@host"
+  - name: qa
+    ssh_key: "ssh-rsa AAAAB3Nza... qa@host"

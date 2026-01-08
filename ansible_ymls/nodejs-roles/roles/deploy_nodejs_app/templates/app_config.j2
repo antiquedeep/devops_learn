@@ -1,0 +1,8 @@
+module.exports = {
+  port: {{ app_port }},
+  env: {
+{% for key, value in env_vars.items() %}
+    {{ key }}: '{{ value }}',
+{% endfor %}
+  }
+};

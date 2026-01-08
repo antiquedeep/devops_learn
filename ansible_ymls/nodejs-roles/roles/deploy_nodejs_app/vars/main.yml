@@ -1,0 +1,6 @@
+---
+app_name: my_nodejs_app
+app_port: 3000
+env_vars:
+  NODE_ENV: production
+  DB_HOST: localhost
