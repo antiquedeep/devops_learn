@@ -1,0 +1,13 @@
+FROM ubuntu:14.04
+LABEL name="Antiqudeep"
+LABEL EMAILID="Antiquedeep@gmail.com"
+LABEL mobile="+91919191919191"
+ENV name=Antiquedeep
+ENV pass=Antiquedeep@123
+RUN touch abc.txt
+RUN apt-get update && apt-get install -y \
+tree \
+python \
+openssh-server
+RUN useradd ${name} && echo "${name}":"${pass}" | chpasswd
+USER ${name}
